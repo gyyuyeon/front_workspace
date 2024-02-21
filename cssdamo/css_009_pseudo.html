@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- nth_child 와 nth-of-type(n) -->
+    <style>
+      /* 자식들중 2번째 인데 두번째께 span이라서 적용안됨*/
+      p:nth-child(2) {
+        background-color: red;
+      }
+
+      /* p라는 요소 중에서 2번째 */
+      p:nth-of-type(2) {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>computer</p>
+      <span>test</span>
+      <p>moniter</p>
+      <p>televison</p>
+      <p>desk</p>
+      <p>top</p>
+    </div>
+  </body>
+</html>
