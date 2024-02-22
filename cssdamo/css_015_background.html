@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        border: 0;
+        margin: 0;
+        padding: 0;
+      }
+
+      .dv1 {
+        background-color: yellow;
+        width: 100px;
+        height: 100px;
+      }
+
+      .dv2 {
+        width: 500px;
+        height: 500px;
+        background-color: gray;
+        background-image: url('images/duckdd.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        /* left center right top bottom 2개씩도 조합가능 */
+      }
+      .dv3 {
+        width: 150px;
+        height: 100px;
+        /* images/pic1.jpg */
+        background-image: url('images/duckdd.png');
+        background-repeat: no-repeat;
+        border: 20px dotted rgba(255, 0, 0, 0.2);
+        padding: 20px;
+        /* 이미지를 나타내는 영역 (가운데 기본) */
+        background-clip: content-box;
+
+        /* border-box padding-box content-box */
+      }
+
+      .dv4 {
+        /* content-box 는 아래 content를 기준 */
+        width: 150px;
+        height: 100px;
+
+        margin-top: 20px;
+        background-image: url('images/duckdd.png');
+        background-repeat: no-repeat;
+        /* border-box아래 border기준 */
+        border: 20px dotted rgba(255, 0, 0, 0.2);
+        /* padding-box 아래 padding을 기준 */
+        padding: 20px;
+        /* 이미지가 배치되는 기준점을 나타낸다 */
+        background-origin: border-box;
+        /* border-box padding-box content-box */
+      }
+
+      /*
+          단축속성 가능한 애들
+          순서도 아래에 맞추어서
+    background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit;
+    백그라운드 단축속성
+    */
+      .dv5 {
+        background: red;
+        width: 300px;
+        height: 100px;
+      }
+      .dv6{
+     background:url('images/bananadd.png') center center no-repeat; 
+     border:1px solid black;
+      width:300px;
+      height:200px;
+   }
+    </style>
+  </head>
+  <body>
+    <div class="dv1">&nbsp;</div>
+    <div class="dv2">&nbsp;</div>
+    <div class="dv3">&nbsp;</div>
+    <div class="dv4">&nbsp;</div>
+    <div class="dv5">&nbsp;</div>
+    <div class="dv6">&nbsp;</div>
+  </body>
+</html>
