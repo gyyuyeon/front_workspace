@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js009_datatype.html</title>
+  </head>
+  <body>
+    <script>
+      // data type : primitive datatype(기본데이터 타입), reference datatype(참조 데이터 타입)
+      let num = 3;
+      console.log(typeof num); //number
+      console.log(num + 2); //5
+
+      num = '3';
+      console.log(typeof num); //number
+      console.log(num + 2); //5
+
+      let avg = 4.5;
+      console.log(typeof avg); //number
+      console.log(avg + 2); //5
+
+      let check = true;
+      console.log(`check=${check}, ${typeof check}`); //true, boolean
+
+      let data = 'javascript';
+      console.log(`data=${data}, ${typeof data}`); //data=javascript, string
+
+      let na = undefined;
+      console.log(`na=${na}, ${typeof na}`); //na=undefined, undefined
+
+      let name = null;
+      console.log(`name=${name}, ${typeof name}`); //name=null, object
+
+      let loc = new String('node');
+      console.log(`loc=${loc},${typeof loc}`);
+      console.log(`loc=${loc instanceof String}`);
+
+      //변수의 값으로 사용되는 함수는 익명함수로 정의한다
+      let fn = function () {
+        console.log('function');
+      };
+      console.log(`fn=${fn},${typeof fn}`);
+
+      //배열
+      let arr = [1, 2, 3];
+      console.log(`arr=${arr},${typeof arr}`); //123 object
+
+      let customer = { name: '홍길동', age: 30 };
+      // 대문자 Object
+      console.log(`customer =${customer},${typeof customer}`); //
+      console.log(`loc=${customer instanceof Object}`);
+
+      console.log(`${customer.name}, ${customer.name}`);
+    </script>
+  </body>
+</html>

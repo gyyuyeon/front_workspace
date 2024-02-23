@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js007_var_let.html</title>
+  </head>
+  <body>
+    <script>
+      //Hoisting
+      // 변수선언전 foo is not defined
+      // 변수선언후 foo :undefined // 인식을 한다
+      console.log(`foo:${foo}`);
+
+      // 변수선언전 bar is not defined
+      // 변수선언전 bar can't access 'bar' befor initization
+      console.log(`bar:${bar}`);
+
+      var foo;   // 변수 메모리가 먼저 처리를하고 파씽
+      let bar;
+    </script>
+  </body>
+</html>

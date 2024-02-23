@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js005_var_let.html</title>
+  </head>
+  <body>
+    <script>
+      /*
+     변수의 스코프(scope) (var와 let)
+     1. var는 변수가 사용되는 범위가 전역, 함수 내부 로컬 2가지만 가능하다.
+     2. let는 변수가 사용되는 범위가 전역, 함수 내부 로컬, 코드 블록, 표현식 로컬등의 정의에 사용할 수 있다.
+    */
+      // var는 밖에서도 i 참조 가능
+
+      // var let const 꼭꼬 쓰기
+      for (var i = 1; i <= 3; i++) {
+        console.log(`i=${i}`); // 1, 2, 3
+      }
+      console.log(`i=${i}`); // 4
+      console.log(`i=${i}`); // 4
+      console.log('====================');
+
+      for (let j = 1; j <= 3; j++) {
+        console.log(`j=${j}`); // 1, 2, 3
+      }
+      console.log(`j=${j}`); // x
+    </script>
+  </body>
+</html>

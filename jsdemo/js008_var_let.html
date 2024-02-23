@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js008_var_let.html</title>
+  </head>
+  <body>
+    <script>
+      let bar = 1;
+      {
+        //Cannot access 'bar' before initialization
+        // hoisting이 발생하지 않는다
+        console.log(bar);
+        //let bar =2;
+        //console.log(bar);
+      }
+    </script>
+  </body>
+</html>

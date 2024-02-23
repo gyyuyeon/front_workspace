@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js003_variable.html</title>
+  </head>
+  <body>
+    <script>
+      //변수 : 변하는 데이터(값)을 저장할수 있는 메모리 공간이다
+      //var, let, const
+      console.log(3);
+      console.log(3);
+
+      let data = 3;
+      console.log(data);
+      console.log('data:%d', data);
+
+      let s = 'js';
+      let f = 4.5;
+      console.log(`s:%s f:%f`, s, f);
+      //크롬에서는 숫자 서식이 지원안됨()
+      console.log(`f:%.1f`,f);
+      let b = true;
+      console.log(`b:%s`, b);
+
+      //템플릿 문자열
+      console.log(`data:${data} s:${s} b:${b}`);
+      let d = null;
+      console.log(`d=${d}`);
+      // 변수에 값이 없음
+      console.log('e=${e}');
+    </script>
+  </body>
+</html>
