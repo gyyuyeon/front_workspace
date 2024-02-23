@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -68,3 +69,75 @@
     <img src="images/btn.gif" />
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* display : 요소의 성질을 변경해주는 속성 */
+      a {
+        background-color: yellow;
+        width: 100px;
+        height: 100px;
+        display: block;
+        border: 1px solid black;
+        text-align: center;
+        /* 디스플레이 블록에서는 불가 vertical-align: widdle; */
+        line-height: 100px;
+        /* 블록 요소일때는 이렇게 세로 정렬 */
+      }
+
+      div {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        display: inline;
+      }
+      span {
+        background-color: olive;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+      }
+      td {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        /* 새로 정렬 가능 */
+        vertical-align: top;
+      }
+      .sp {
+        border: 2px solid black;
+        text-align: center;
+        vertical-align: middle;
+        /* 위에꺼 안먹혀서 cell로 변환 */
+        display: table-cell;
+      }
+      h1 {
+        /* 특정요소를 안보이게 하기위해 none */
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="http://www.w3schools.com">W3SCHOOLS</a>
+    <a href="http://www.naver.com">NAVER</a>
+    <a href="http://www.daum.net">DAUM</a>
+    <div id="aa">display</div>
+    <span>웹문서</span>
+    <h1>테이블의 제목</h1>
+    <table border="1">
+      <tr>
+        <td>one</td>
+        <td>two</td>
+      </tr>
+    </table>
+    <span class="sp">text</span>
+    <img src="images/btn.gif" />
+  </body>
+</html>
+>>>>>>> 378b8ae7419f4c91f8e03e7fa7ed8e42acc15c65

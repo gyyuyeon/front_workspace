@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -88,3 +89,95 @@
     </div>
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 브라우저별 요소의 기본값을 제공한다 - 브라우저별로 다르게 제공되어서*/
+      /* 동서남북 여백 0픽스 */
+      * {
+        border-width: 0;
+        margin: 0;
+        padding: 0;
+      }
+
+      .wrap {
+        width: 160px;
+        height: 260px;
+        background-color: yellow;
+      }
+
+      div.aa {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border-top: 10px solid black;
+        border-bottom: 10px solid black;
+        margin-bottom: 10px;
+      }
+      /* margin이 겹치면 하나만적용되고 큰값으로 적용된다 */
+      div.bb {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        border-top: 10px solid black;
+        border-bottom: 10px solid black;
+        margin-top: 20px;
+      }
+      span.sp1 {
+        background-color: aqua;
+      }
+      span.sp2 {
+        background-color: lime;
+        margin-left: 10px;
+        /* left right 적용됨 */
+        margin-top: 10px;
+        margin-bottom: 50px;
+        /* top bottom 적용안됨 */
+      }
+
+      div.line {
+        border: 1px solid black;
+      }
+
+      /* id = #표시 */
+      div#m1 {
+        width: 100px;
+        height: 99px;
+        background-color: blue;
+        /* hack을 통해서 편법 */
+        /* div#m2의 margin값이 top에 적용되도록 하기 위해서 설정 */
+        padding-top: 1px;
+      }
+
+      div#m2 {
+        width: 80;
+        height: 80px;
+        background-color: yellow;
+        margin: 10px;
+        /* left right top bottom  top적용안됨*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="aa">one</div>
+      <div class="bb">two</div>
+    </div>
+
+    <div class="inline">
+      <span class="sp1">span1</span><span class="sp2">span2</span>
+    </div>
+
+    <div class="line">line</div>
+
+    <div id="m1">
+      <div id="m2">box</div>
+    </div>
+  </body>
+</html>
+>>>>>>> 378b8ae7419f4c91f8e03e7fa7ed8e42acc15c65
