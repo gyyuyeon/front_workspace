@@ -63,3 +63,52 @@ console.log(`fullname:${kname}, job:${jbn}, loc:${loc}`); //fullname:고수, job
 let s, r;
 ({ s, r } = { s: 1, r: 2 });
 console.log(`s=${s}  r=${r}`); //s=1  r=2
+
+//////////////////////////////////////////////////////////////////
+//completed의 값이 true인 데이터만 검색하라.
+let habits = [
+  { id: 1, content: '수영', completed: false },
+  { id: 2, content: '걷기', completed: true },
+  { id: 3, content: '명상', completed: true },
+  { id: 4, content: '독서', completed: false },
+];
+
+let listHabit = [];
+for (let i = 0; i < habits.length; i++) {
+  if (habits[i].completed) {
+    listHabit.push(habits[i]);
+  }
+}
+
+console.log(listHabit);
+///////// 특정한 값이 트루이면 모든 데이터값을 리턴
+let completedHabit = habits.filter((Element) => {
+  return Element.completed;
+});
+
+console.log(completedHabit);
+
+///////////////////////////////////
+//member변수에서 데이터를 추출하여 '고수 고객님은 서울에 거주합니다.' 라고 출력하세요.
+
+let member = {
+  hname: '고수',
+  address: {
+    zipCode: '526-143',
+    city: '서울',
+  },
+};
+// console.log(
+//   member.hname + ' 고객님은 ' + member.address.city + '에 거주합니다.'
+// );
+
+// console.log(`${member.hname} 고객님은 ${member.address.city}에 거주합니다.`);
+
+// let { hname, address } = member;
+// console.log(`${hname} 고객님은 ${address.city} 에 거주합니다.`);
+
+let {
+  hname,
+  address: { zipCode, city },
+} = member;
+console.log(`${hname} 고객님은 ${city} 에 거주합니다.`);
