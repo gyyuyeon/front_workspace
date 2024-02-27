@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js050_main_popup.html</title>
+    <style>
+      #popup {
+        width: 301px;
+        height: 351px;
+        border: 1px solid black;
+        position: fixed;
+        left: 30%;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        네이버와 다음이 내달 총선 페이지를 개설하고
+        가짜뉴스·딥페이크(Deepfake)에 대한 대응책을 공개한다. 네이버는 딥페이크
+        콘텐츠나 관련 검색문구에 대해 경고를 띄운다. 다음을 운영하는 카카오는
+        이미지 생성모델 '칼로'에 보이지 않는 워터마크 기술을 도입하는 등
+        대응책을 준비한다. 조만간 구글코리아, 메타 등과 함께 딥페이크 대응 관련
+        기술 협정에 합의하면서 구체적인 대응책을 확정한다. 26일 정보기술(IT)
+        업계에 따르면 네이버는 다음 달 초 애플리케이션(앱)의 뉴스탭 내에 22대
+        국회의원 선거에 대비해 총선 페이지를 마련한다. 지난 11일 언론사 홈 내
+        총선 섹션을 신설한데 이어 앱 내에서 본격적으로 총선 뉴스를 지원한다.
+        당초 이달 안에 총선 페이지를 개설할 계획이었지만 내달 초로 개설 일정을
+        순연했다. 네이버는 총선 페이지 공개와 함께 가짜뉴스·딥페이크 방지책도
+        공개할 계획이다. 네이버는 지난 1일 22대 국회의원 선거에 대비해 24시간
+        모니터링을 강화하고 선거 관련 허위 정보 신고 센터를 신설하는 등 대응책을
+        제시했다. 이에 더해 다음 달 딥페이크에 대한 대응책도 추가로 발표한다.
+        네이버는 딥페이크에 대응하기 위해 이용자 검색창에 유해 딥페이크로 접근할
+        가능성이 있는 검색어를 입력하면 안내문구를 표시한다. 블로그·카페 등에서
+        딥페이크 콘텐츠를 올리면 제재를 받을 수 있다는 경고 문구도 송출한다.
+        생성형 AI 등에 대한 대응책도 추가로 논의하고 있다.
+      </p>
+      <div id="popup">
+        <img src="images/popup.jpg" usemap="#pop" />
+      </div>
+      <map name="pop" id="pop">
+        <area shape="rect" coords="255,332,290,345" href="#" alt="창닫기" />
+      </map>
+    </div>
+    <script>
+      let close = document.querySelector('map#pop area');
+      close.onclick = () => {
+        let popup = document.querySelector('div#popup');
+        popup.style.display = 'none';
+      };
+    </script>
+  </body>
+</html>
