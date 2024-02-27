@@ -8,7 +8,7 @@ console.log('start========================');
 
 // 1000이  1초
 //setTimeout(실행함수, 시간)
-//setTimeout(display, 5000);
+setTimeout(display, 5000);
 console.log('end ======================');
 
 // 함수를 반복 5초마다
