@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('button').click(function () {
+          document.write(this + ' ' + $(this) + '<br/>');
+
+          document.write(this.parentNode.nodeName + '<br/>');
+
+          document.write($(this).parent()[0].nodeName);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btn">commit</button>
+  </body>
+</html>

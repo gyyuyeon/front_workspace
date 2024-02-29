@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // 속성 : attribute(html), property(Javascript)
+        console.log(document.querySelector('a'.herf));
+        //jquery001_cdn.html
+        console.log(document.querySelector('a').getAttribute('herf'));
+        //jquery001_cdn.html locahost/jquery001_cdn.html
+        console.log($('a').attr('href') + '' + $('a').prop('href'));
+
+        //undefinde false
+        //checked true
+        // $('input').prop('checked') 될수있으면 이거써라
+        console.log($('input').attr('checked'));
+        console.log(
+          $('input').attr('checked') + '' + $('input').prop('checked')
+        );
+        //false
+        console.log(document.querySelector('input'.checked));
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btn">commit</button>
+    <a href="jquery001_cdn.html">첫페이지</a>
+    <input type="checkbox" />
+    <div>test</div>
+  </body>
+</html>

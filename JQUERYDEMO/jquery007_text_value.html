@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //value -> val
+        // innerText => text()
+        //innerHTML -> html()
+
+        //javascript
+        let node1 = $('div').text();
+        console.log(node1);
+
+        //<span>javascript</span>
+        let node2 = $('div').html();
+        console.log(node2);
+
+        let node3 = $('input').val();
+        console.log(node3);
+      });
+    </script>
+  </head>
+  <body>
+    <button>click</button>
+    <div><span>javascript</span></div>
+    <input type="text" value="jquery" />
+  </body>
+</html>
