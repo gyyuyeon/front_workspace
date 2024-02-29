@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        let arr = [
+          ['불고기', '삼계탕', '비빔밥'],
+          ['짜장면', '짬뽕', '탕수육'],
+          ['회덮밥', '덴뿌라', '우동'],
+        ];
+
+        $('#menu').change(function () {
+          //let row = $(this + ' option:selected').index();
+          let row = $('option:selected', this).index();
+          //console.log(row);
+
+          if (row == 0) {
+            alert('한식 중식 일식을 선택해 주세요');
+            // $('#sub option.food').remove();
+
+            return;
+          }
+          // 서브메뉴 삭제
+          $('#sub option.food').remove();
+
+          //서브메뉴추가
+          arr[row - 1].map((element, index) => {
+            $('#sub').append(
+              `<option value="${index + 1}" class="food">${element}</option>`
+            );
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <select id="menu" name="menu">
+      <!-- <option value='' selected disabled hidden>
+        메뉴선택
+      </option>; -->
+      <option value="" selected="selected">메뉴선택</option>
+      <option value="m1">한식</option>
+      <option value="m2">중식</option>
+      <option value="m3">일식</option>
+    </select>
+
+    <select id="sub">
+      <option value="">음식선택</option>
+    </select>
+  </body>
+</html>
