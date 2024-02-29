@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <style>
+    h2 {
+      width: 100px;
+      height: 70px;
+      background-color: yellow;
+    }
+  </style>
+  <script>
+    $(document).ready(function () {
+      $('h1 a').on('mouseover focus', function () {
+        $(this).css({ 'background-color': 'red' });
+      });
+
+      $('h1 a').on('mouseout blur', function () {
+        $(this).css({ 'background-color': 'white' });
+      });
+
+      // $('요소').on({ 이름(이벤트): 값(함수), 이름(이벤트): 값(함수) });
+      // $('h1 a').on({
+      //   'mouseover focus': function () {
+      //     $(this).css({ 'background-color': 'red' });
+      //   },
+      //   'mouseout blur': function () {
+      //     $(this).css({ 'background-color': 'white' });
+      //   },
+      // });
+
+      /////////////////////////////////////////////////////
+      //동적으로 생성된 요소에 이벤트 등록
+      // orange 색상이 적용이 안됨
+      // $(document).on('mouseover focus', 'h2 a', function () {
+      //   $(this).css({ color: 'orange' });
+      // });
+
+      // 앞부분h2는 정적인 부모요소
+
+      $('h2').on('mouseover focus', 'a', function () {
+        $(this).css({ color: 'orange' });
+      });
+
+      $('h2').on('mouseout blur', 'a', function () {
+        $(this).css({ color: 'black' });
+      });
+
+      $('h2').append('<a href ="#">new element</a>');
+
+      // 이벤트 제거
+      $('button#clear').click(function () {
+        $('h2 a').off('mouseover focus mouseout blur');
+        $('h2').off('mouseover focus', 'a');
+      });
+    });
+  </script>
+  <body>
+    <h1><a href="#">버튼</a></h1>
+
+    <h2></h2>
+
+    <h3><a href="#">하위요소1</a><a href="#">하위요소2</a></h3>
+
+    <button id="btn">one</button>
+    <span>0</span>
+    <button id="clear">이벤트 제거</button>
+  </body>
+</html>

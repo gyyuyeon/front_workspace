@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // 하나의 요소에 여러가지 이벤트를 동시에 걸떄
+        $('input').on('focus mouseover', function () {
+          $('div').css({ 'background-color': 'yellow' });
+        });
+
+        $('input').on('focus mouseout', function () {
+          $('div').css({ 'background-color': 'white' });
+        });
+
+        // 글자를 적으면 아래에 나오게
+        $('#fid').keyup(function () {
+          $('p').text($(this).val());
+        });
+
+        $('#fname').keydown(function () {
+          $('p').text($(this).val());
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div><input type="text" name="id" id="fid" /></div>
+
+    <button>keyboard</button>
+    <input type="text" name="id" id="fname" />
+    <p></p>
+  </body>
+</html>
