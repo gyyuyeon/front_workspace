@@ -1,0 +1,20 @@
+const Input1 = (props) => {
+  const { insertTodo, input, inputRef, handleChangeText } = props;
+  return (
+    <>
+      <form onSubmit={insertTodo}>
+        <input
+          type="text"
+          value={input}
+          ref={inputRef}
+          id="work"
+          placeholder="오늘의 할일" // 기본적으로 뜰꺼
+          onChange={handleChangeText}
+        />
+        <input type="submit" value="Create" />
+      </form>
+    </>
+  );
+};
+
+export default Input1;
